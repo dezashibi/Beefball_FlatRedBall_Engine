@@ -1,21 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-
-using FlatRedBall;
-using FlatRedBall.Input;
-using FlatRedBall.Instructions;
-using FlatRedBall.AI.Pathfinding;
-using FlatRedBall.Graphics.Animation;
-using FlatRedBall.Gui;
-using FlatRedBall.Math;
-using FlatRedBall.Math.Geometry;
-using FlatRedBall.Localization;
-using Microsoft.Xna.Framework;
-
-using GrinixDev.Entities;
-
+﻿using FlatRedBall.Input;
 
 namespace GrinixDev.Screens
 {
@@ -23,22 +6,30 @@ namespace GrinixDev.Screens
     {
         private void CustomInitialize()
         {
-            
+            // PlayerBall1 refers to the entity we've defined in the editor
+            PlayerBall1.MovementInput =
+                InputManager.Keyboard.Get2DInput(
+                    Microsoft.Xna.Framework.Input.Keys.A,
+                    Microsoft.Xna.Framework.Input.Keys.D,
+                    Microsoft.Xna.Framework.Input.Keys.W,
+                    Microsoft.Xna.Framework.Input.Keys.S
+                );
+            PlayerBall1.BoostInput = InputManager.Keyboard.GetKey(Microsoft.Xna.Framework.Input.Keys.LeftShift);
         }
 
         private void CustomActivity(bool firstTimeCalled)
         {
-            
+
         }
 
         private void CustomDestroy()
         {
-            
+
         }
 
         private static void CustomLoadStaticContent(string contentManagerName)
         {
-            
+
         }
     }
 }
