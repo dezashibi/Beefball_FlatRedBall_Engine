@@ -11,8 +11,9 @@ namespace GrinixDev.Screens
 
         private void SetupInput()
         {
-            // PlayerBall1 refers to the entity we've defined in the editor
+            // PlayerBall1 and Player2 refer to the objects from entities we've added to the screen in the editor
 
+            /* Player 1 Controller */
             if (InputManager.Xbox360GamePads[0].IsConnected)
             {
                 PlayerBall1.MovementInput = InputManager.Xbox360GamePads[0].LeftStick;
@@ -27,6 +28,23 @@ namespace GrinixDev.Screens
                         Microsoft.Xna.Framework.Input.Keys.S
                     );
                 PlayerBall1.BoostInput = InputManager.Keyboard.GetKey(Microsoft.Xna.Framework.Input.Keys.LeftShift);
+            }
+
+            /* Player 2 Controller */
+            if (InputManager.Xbox360GamePads[1].IsConnected)
+            {
+                PlayerBall2.MovementInput = InputManager.Xbox360GamePads[1].LeftStick;
+                PlayerBall2.BoostInput = InputManager.Xbox360GamePads[1].GetButton(Xbox360GamePad.Button.A);
+            }
+            else
+            {
+                PlayerBall2.MovementInput = InputManager.Keyboard.Get2DInput(
+                        Microsoft.Xna.Framework.Input.Keys.Left,
+                        Microsoft.Xna.Framework.Input.Keys.Right,
+                        Microsoft.Xna.Framework.Input.Keys.Up,
+                        Microsoft.Xna.Framework.Input.Keys.Down
+                    );
+                PlayerBall2.BoostInput = InputManager.Keyboard.GetKey(Microsoft.Xna.Framework.Input.Keys.RightShift);
             }
         }
 
