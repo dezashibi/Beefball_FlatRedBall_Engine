@@ -34,9 +34,14 @@
     <Compile Include="Entities\Puck.Generated.cs">
       <DependentUpon>Puck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\ScoreHud.cs" />
+    <Compile Include="Entities\ScoreHud.Generated.cs">
+      <DependentUpon>ScoreHud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\GoalFactory.Generated.cs" />
     <Compile Include="Factories\PlayerBallFactory.Generated.cs" />
     <Compile Include="Factories\PuckFactory.Generated.cs" />
+    <Compile Include="Factories\ScoreHudFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs" />

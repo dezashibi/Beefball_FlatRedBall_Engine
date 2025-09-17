@@ -51,6 +51,9 @@
     },
     {
       "Name": "Entities\\Puck"
+    },
+    {
+      "Name": "Entities\\ScoreHud"
     }
   ],
   "Bookmarks": [],
