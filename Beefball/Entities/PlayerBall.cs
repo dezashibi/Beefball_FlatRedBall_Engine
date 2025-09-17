@@ -19,6 +19,11 @@ namespace GrinixDev.Entities
 
         private void CustomActivity()
         {
+            MovementActivity();
+        }
+
+        private void MovementActivity()
+        {
             if (MovementInput != null)
             {
                 XVelocity = MovementInput.X * MovementSpeed;
