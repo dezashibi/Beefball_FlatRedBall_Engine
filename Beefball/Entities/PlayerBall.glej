@@ -48,7 +48,19 @@
         }
       ],
       "Name": "MovementSpeed",
-      "DefaultValue": 100.0,
+      "DefaultValue": 350.0,
+      "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "Drag",
+      "DefaultValue": 1.0,
       "SetByDerived": true
     }
   ],

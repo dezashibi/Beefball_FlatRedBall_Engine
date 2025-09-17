@@ -351,6 +351,11 @@
           "Name": "FirstCollisionMass",
           "Value": 0.0,
           "Type": "float"
+        },
+        {
+          "Name": "CollisionElasticity",
+          "Value": 0.5,
+          "Type": "float"
         }
       ],
       "InstructionSaves": [],

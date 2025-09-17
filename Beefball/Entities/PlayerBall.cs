@@ -26,8 +26,8 @@ namespace GrinixDev.Entities
         {
             if (MovementInput != null)
             {
-                XVelocity = MovementInput.X * MovementSpeed;
-                YVelocity = MovementInput.Y * MovementSpeed;
+                XAcceleration = MovementInput.X * MovementSpeed;
+                YAcceleration = MovementInput.Y * MovementSpeed;
             }
         }
 
