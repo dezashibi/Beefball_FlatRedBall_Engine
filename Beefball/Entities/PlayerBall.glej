@@ -38,6 +38,18 @@
       ],
       "Name": "Z",
       "SetByDerived": true
+    },
+    {
+      "Properties": [
+        {
+          "Name": "Type",
+          "Value": "float",
+          "Type": "String"
+        }
+      ],
+      "Name": "MovementSpeed",
+      "DefaultValue": 100.0,
+      "SetByDerived": true
     }
   ],
   "Properties": [

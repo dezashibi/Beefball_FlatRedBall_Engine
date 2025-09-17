@@ -19,11 +19,10 @@ namespace GrinixDev.Entities
 
         private void CustomActivity()
         {
-            float movementSpeed = 10;
             if (MovementInput != null)
             {
-                XVelocity = MovementInput.X * movementSpeed;
-                YVelocity = MovementInput.Y * movementSpeed;
+                XVelocity = MovementInput.X * MovementSpeed;
+                YVelocity = MovementInput.Y * MovementSpeed;
             }
         }
 
