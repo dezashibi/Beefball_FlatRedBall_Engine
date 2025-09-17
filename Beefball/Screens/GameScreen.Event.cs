@@ -31,6 +31,10 @@
             Puck1.X = 0;
             Puck1.Y = 0;
             Puck1.Velocity = Microsoft.Xna.Framework.Vector3.Zero;
+
+
+            ScoreHud1.Score1 = _player1Score;
+            ScoreHud1.Score2 = _player2Score;
         }
     }
 }
