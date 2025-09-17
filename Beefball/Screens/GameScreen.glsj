@@ -79,6 +79,18 @@
               "Member": "X",
               "Value": 180.0,
               "Time": 0.0
+            },
+            {
+              "Type": "Color",
+              "Member": "CircleInstanceColor",
+              "Value": "Cyan",
+              "Time": 0.0
+            },
+            {
+              "Type": "Color",
+              "Member": "CooldownCircleColor",
+              "Value": "Cyan",
+              "Time": 0.0
             }
           ],
           "SourceType": 1,

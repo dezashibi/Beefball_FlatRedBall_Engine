@@ -1,4 +1,5 @@
-﻿using FlatRedBall.Input;
+﻿using FlatRedBall;
+using FlatRedBall.Input;
 
 namespace GrinixDev.Entities
 {
@@ -6,6 +7,9 @@ namespace GrinixDev.Entities
     {
         public I2DInput MovementInput { get; set; }
         public IPressableInput BoostInput { get; set; }
+
+        // Set a large negative number so that dashing can happen immediately
+        private double _lastTimeDashed = -1000;
 
         /// <summary>
         /// Initialization logic which is executed only one time for this Entity (unless the Entity is pooled).
@@ -20,6 +24,7 @@ namespace GrinixDev.Entities
         private void CustomActivity()
         {
             MovementActivity();
+            DashAcitivity();
         }
 
         private void MovementActivity()
@@ -28,6 +33,32 @@ namespace GrinixDev.Entities
             {
                 XAcceleration = MovementInput.X * MovementSpeed;
                 YAcceleration = MovementInput.Y * MovementSpeed;
+            }
+        }
+
+        private void DashAcitivity()
+        {
+            float magnitude = MovementInput?.Magnitude ?? 0;
+
+            bool shouldBoost = BoostInput?.WasJustPressed == true &&
+                TimeManager.CurrentScreenSecondsSince(_lastTimeDashed) > DashFrequency &&
+                magnitude > 0;
+
+            if (shouldBoost)
+            {
+                _lastTimeDashed = TimeManager.CurrentScreenTime;
+
+                // dividing by magnitude tells us what X and Y would
+                // be if the user were holding the input all the way in
+                // the current direction
+                float normalizedX = MovementInput.X / magnitude;
+                float normalizedY = MovementInput.Y / magnitude;
+
+                XVelocity = normalizedX * DashSpeed;
+                YVelocity = normalizedY * DashSpeed;
+
+                CurrentDashCategoryState = DashCategory.Tired;
+                InterpolateToState(DashCategory.Rested, DashFrequency);
             }
         }
 
