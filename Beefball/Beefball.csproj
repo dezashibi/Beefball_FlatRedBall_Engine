@@ -26,7 +26,12 @@
     <Compile Include="Entities\PlayerBall.Generated.cs">
       <DependentUpon>PlayerBall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Puck.cs" />
+    <Compile Include="Entities\Puck.Generated.cs">
+      <DependentUpon>Puck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\PlayerBallFactory.Generated.cs" />
+    <Compile Include="Factories\PuckFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs" />
