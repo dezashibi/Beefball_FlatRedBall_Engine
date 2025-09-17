@@ -1,5 +1,6 @@
 ﻿using FlatRedBall;
 using FlatRedBall.Input;
+using StateInterpolationPlugin;
 
 namespace GrinixDev.Entities
 {
@@ -58,7 +59,11 @@ namespace GrinixDev.Entities
                 YVelocity = normalizedY * DashSpeed;
 
                 CurrentDashCategoryState = DashCategory.Tired;
-                InterpolateToState(DashCategory.Rested, DashFrequency);
+                //InterpolateToState(DashCategory.Rested, DashFrequency);
+                TweenerManager.Self.TweenAsync(CooldownCircle, (float NewVal) =>
+                {
+                    CooldownCircle.Radius = NewVal;
+                }, 0, DashCategory.Rested.CooldownCircleRadius, DashFrequency);
             }
         }
 
