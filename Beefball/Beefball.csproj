@@ -34,6 +34,10 @@
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\GameScreen.Generated.cs">
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setup\CameraSetup.Generated.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.Generated.cs" />
     <Compile Include="TileCollisions\CollidableVsTileShapeCollectionRelationship.Generated.cs" />

@@ -11,6 +11,7 @@
     "GenerateLoadGlobalContentCode": true
   },
   "SyncedProjects": [],
+  "StartUpScreen": "Screens\\GameScreen",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},
   "IgnoredDirectories": [],
@@ -36,7 +37,11 @@
   "ApplyToFixedResolutionPlatforms": true,
   "ExternallyBuiltFileDirectory": "../../",
   "FileVersion": 64,
-  "ScreenReferences": [],
+  "ScreenReferences": [
+    {
+      "Name": "Screens\\GameScreen"
+    }
+  ],
   "EntityReferences": [
     {
       "Name": "Entities\\PlayerBall"
