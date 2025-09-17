@@ -4,6 +4,9 @@ namespace GrinixDev.Screens
 {
     public partial class GameScreen
     {
+        int _player1Score = 0;
+        int _player2Score = 0;
+
         private void CustomInitialize()
         {
             SetupInput();
