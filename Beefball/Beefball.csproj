@@ -44,7 +44,9 @@
     <Compile Include="Factories\ScoreHudFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="Game1.Generated.cs" />
+    <Compile Include="Game1.Generated.cs">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalContent.Generated.cs" />
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
